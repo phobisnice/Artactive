@@ -1,0 +1,40 @@
+.main-nav {
+  &__list {
+    @include reset-list;
+    display: flex;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin: 0 10px;
+
+    @include tablets {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 5px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    color: $invert-color;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $btn-color;
+    }
+
+    &:active {
+      text-decoration: underline;
+    }
+
+    @include tablets {
+      color: $text-color;
+    }
+  }
+}

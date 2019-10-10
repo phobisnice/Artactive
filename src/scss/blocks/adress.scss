@@ -1,0 +1,49 @@
+.adress {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 120px;
+    left: 15px;
+    background-color: $invert-color;
+    z-index: 1;
+    padding: 80px 90px;
+    box-shadow: 0px 23px 32px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include phones {
+      top: 60px;
+      left: 50%;
+      width: 90%;
+      transform: translateX(-50%);
+      padding: 35px 30px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: $text-color;
+    text-decoration: none;
+
+    @include phones {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 15px;
+    width: auto;
+    height: 15px;
+    width: 15px;
+    fill: $title-color;
+
+    @include phones {
+      flex-shrink: 0;
+    }
+  }
+}

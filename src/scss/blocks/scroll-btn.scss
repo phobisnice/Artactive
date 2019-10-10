@@ -1,0 +1,20 @@
+.scroll-btn {
+  display: block;
+  transition: all 0.4s linear;
+  animation: infinite linear 2s moving;
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    fill: $invert-color;
+
+    &:hover {
+      fill: $btn-color;
+    }
+  }
+
+  @include phones {
+    display: none;
+  }
+}

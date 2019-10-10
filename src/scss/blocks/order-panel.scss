@@ -1,0 +1,103 @@
+.order-panel {
+  padding: 40px;
+  background-color: $title-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $invert-color;
+  box-shadow: 0px 23px 32px 0px rgba(81, 8, 86, 0.33);
+  border-radius: 10px;
+
+  &--faq {
+    padding-left: 310px;
+    background-repeat: no-repeat;
+    background-size: 250px auto;
+    background-position: left 25px center;
+    background-image: url('/img/question.png');
+    margin: 20px 0 40px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: -30%;
+      top: -10%;
+      border-radius: 50% 0 0 ;
+      background-color: rgba(255, 255, 255, 0.07);
+      z-index: -1;
+
+      @include phones {
+        display: none;
+      }
+    }
+
+    &::before {
+      width: 600px;
+      height: 600px;
+    }
+
+    &::after {
+      width: 800px;
+      height: 800px;
+    }
+
+    @include small-tablets {
+      padding-left: 40px;
+      background-position: right 20px top -50px;
+    }
+
+    @include phones {
+      background-position: right -90px top -60px;
+      padding: 40px 30px;
+    }
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
+
+  &__text {
+    @include small-tablets {
+      display: flex;
+      align-items: center;
+    }
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__sub {
+    font-size: 16px;
+    margin: 0 0 10px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 30px;
+    padding: 0;
+
+    &--small {
+      margin-bottom: 0;
+
+      @include small-tablets {
+        margin-bottom: 10px;
+        margin-left: 20px;
+      }
+
+      @include phones {
+        margin-bottom: 30px;
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
+}

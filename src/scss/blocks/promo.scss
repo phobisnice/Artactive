@@ -1,0 +1,101 @@
+.promo {
+  padding-left: 615px;
+  position: relative;
+
+  @include tablets {
+    padding-left: 462px;
+  }
+
+  @include phones {
+    padding-left: 15px;
+    padding-top: 360px;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 650px;
+    height: 550px;
+    background-size: contain;
+    background-position: top center;
+    background-image: url("../img/intro-pic.png");
+
+    @include tablets {
+      width: 546px;
+      height: 462px;
+    }
+
+    @include phones {
+      width: 400px;
+      height: 350px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text {
+    order: -1;
+    font-family: "Muller", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    max-width: 450px;
+    margin-bottom: 30px;
+
+    @include tablets {
+      font-size: 45px;
+    }
+
+    @include phones {
+      max-width: 100%;
+      font-size: 36px;
+    }
+  }
+
+  &__title {
+    font-family: "Muller", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+
+    @include tablets {
+      font-size: 21px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @include tablets {
+      flex-direction: column;
+    }
+
+    @include phones {
+      align-items: center;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__sub {
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
+    max-width: 210px;
+    font-size: 16px;
+
+    @include tablets {
+      margin-left: 0;
+      margin-top: 25px;
+    }
+  }
+}

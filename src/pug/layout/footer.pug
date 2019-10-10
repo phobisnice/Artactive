@@ -1,1 +1,19 @@
 footer.main-footer
+  .container.adress#contacts
+    .adress__content
+      h2.block-title 5. Контакты
+      span.adress__item.adress__item--location
+        +icon('location', 'adress__icon adress__icon--location')
+        | г. Ярославль, проспект Октября, 88
+      a(href="mailto:art-aktiv.76@mail.ru").adress__item.adress__item--mail
+        +icon('mail', 'adress__icon adress__icon--mail')
+        | art-aktiv.76@mail.ru
+      a(href="tel:+79201488131").adress__item.adress__item--phone
+        +icon('phone', 'adress__icon adress__icon--phone')
+        | +7 (920) 148 81 31
+  .main-footer__map#map
+  .main-footer__bottom
+    .container.main-footer__container
+      span.main-footer__copyright ООО «АртАктив», 2019 ©
+      span.main-footer__creator Created by Gukov Alexey
+

@@ -1,0 +1,46 @@
+.main-footer {
+  &__map {
+    width: 100%;
+    margin: 0 auto;
+    height: 650px;
+
+    @include phones {
+        height: 550px;
+    }
+  }
+
+  &__bottom {
+    background-color: $title-color;
+    color: $invert-color;
+    padding: 25px 0;
+
+    @include phones {
+      padding: 50px 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.2;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    opacity: 0.7;
+
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__creator {
+    opacity: 0.7;
+  }
+}

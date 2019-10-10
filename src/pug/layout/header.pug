@@ -1,1 +1,24 @@
 header.main-header
+  .container.main-header__container
+    a(href="/").main-logo Artactive
+    button(type="button" aria-label="открыть меню").menu-btn.main-header__menu-open
+      +icon('open', 'menu-btn__icon')
+    .main-header__mobile
+      button(type="button" aria-label="закрыть меню").btn-close.main-header__menu-close
+        +icon('close', 'btn-close__icon')
+      nav.main-nav.main-header__nav
+        ul.main-nav__list
+          -
+            var links = [
+              ["О нас", "about"],
+              ["Услуги", "services"],
+              ["Отзывы", "reviews"],
+              ["FAQ", "faq"],
+              ["Контакты", "contacts"]
+            ]
+          each link in links
+            li.main-nav__item
+              a(href=`#${link[1]}`).main-nav__link.js-scrolling #{link[0]}
+      .main-header__contacts
+        a(href="tel:+79201488131").main-header__phone +7 (920) 148 81 31
+        a(href="#").bordered-btn.bordered-btn--mobile-colored.js-modal-form Заказать звонок

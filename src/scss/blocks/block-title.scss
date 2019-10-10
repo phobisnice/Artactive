@@ -1,0 +1,16 @@
+.block-title {
+  color: $title-color;
+  font-family: "Muller", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin: 0 0 70px;
+
+  @include tablets {
+    margin-bottom: 60px;
+  }
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+}

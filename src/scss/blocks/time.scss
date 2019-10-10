@@ -1,0 +1,61 @@
+.time {
+  &__container {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -50px;
+      width: 648px;
+      height: 544px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-image: url("/img/style.png");
+      z-index: -1;
+
+      @include tablets {
+        right: -13%;
+      }
+
+      @include small-tablets {
+        right: -48%;
+      }
+
+      @include phones {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 550px;
+
+    @include phones {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 110px;
+
+    @include phones {
+      margin-bottom: 30px;
+
+      &::after {
+        content: "";
+        width: 290px;
+        height: 245px;
+        margin: 20px 0;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-image: url("/img/style.png");
+      }
+    }
+  }
+}

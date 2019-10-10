@@ -1,0 +1,12 @@
+.content-text {
+  margin: 0 0 30px;
+
+  &--narrow {
+    width: 100%;
+    max-width: 450px;
+
+    @include phones {
+      max-width: 100%;
+    }
+  }
+}

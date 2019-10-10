@@ -1,7 +1,37 @@
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin tablets() {
+  @media screen and (max-width: $bp-tablets) {
+    @content;
+  }
+}
+
+@mixin small-tablets() {
+  @media screen and (max-width: $bp-small-tablets) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: $bp-phones) {
+    @content;
+  }
+}
+
+@mixin small-phones() {
+  @media screen and (max-width: $bp-small-phones) {
+    @content;
+  }
 }

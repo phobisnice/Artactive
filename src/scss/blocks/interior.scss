@@ -1,0 +1,61 @@
+.interior {
+  &__container {
+    display: flex;
+    padding-bottom: 450px;
+    position: relative;
+
+    @include small-tablets {
+      padding-bottom: 320px;
+    }
+
+    @include phones {
+      padding-bottom: 200px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -300px;
+      bottom: 0;
+      width: 1276px;
+      height: 813px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url("/img/wide.png");
+
+      @include small-tablets {
+        width: 536px;
+        height: 640px;
+        background-image: url("/img/wide-tablets.png");
+        left: auto;
+        right: 0;
+        z-index: -1;
+      }
+
+      @include phones {
+        width: 302px;
+        height: 355px;
+      }
+    }
+  }
+
+  &__content {
+    width: 50%;
+    margin-left: auto;
+
+    @include small-tablets {
+      margin-left: 0;
+      width: 100%;
+      max-width: 550px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    @include phones {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.main-header {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    padding: 0 10px;
+    margin: 0 auto;
+
+    @include tablets {
+      padding: 0;
+      margin: 15px 0 auto;
+    }
+  }
+
+  &__phone {
+    color: $invert-color;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 30px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include tablets {
+      color: $text-color;
+      margin-right: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-family: "Muller", Arial, sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  &__menu-open {
+    display: none;
+
+    @include tablets {
+      display: block;
+      margin-right: 10px;
+    }
+  }
+
+  &__menu-close {
+    display: none;
+    align-self: flex-end;
+
+    @include tablets {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @include tablets {
+      padding: 30px 25px 45px 65px;
+      position: fixed;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 0;
+      right: 0;
+      height: 100%;
+      min-height: 100vh;
+      background-color: $invert-color;
+      max-width: 450px;
+      color: $text-color;
+      z-index: 2;
+      overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      transition: all 0.4s linear;
+      transform: translateX(150%);
+      opacity: 0;
+    }
+
+    &--open {
+      @include tablets {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__contacts {
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0;
+    }
+  }
+}

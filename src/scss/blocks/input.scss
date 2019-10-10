@@ -1,0 +1,33 @@
+.input {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $text-color;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: $text-color;
+  border-radius: 0;
+
+  &--light {
+    border-bottom: 1px solid $invert-color;
+    color: $invert-color;
+  }
+
+  &::placeholder {
+    color: inherit;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  &:hover::placeholder {
+    color: $btn-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $btn-color;
+  }
+}

@@ -1,0 +1,19 @@
+.btn-close {
+  border: 0;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  cursor: pointer;
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #ccc;
+
+    &:hover {
+      fill: #000;
+    }
+  }
+}

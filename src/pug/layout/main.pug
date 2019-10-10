@@ -2,15 +2,39 @@ include ../layout/mixins
 
 doctype html
 html(lang="ru")
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        block meta
-        link(href="css/style.css", rel="stylesheet")
-    body
-        .wrapper
-            include ../layout/header
-            block content
-            include ../layout/footer
-        script(src="js/bundle.js")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    block meta
+    link(href="css/style.css", rel="stylesheet")
+  body
+    .wrapper
+      .intro
+        include ../layout/header
+        .promo.container.intro__content
+          h1.promo__title Оперативная полиграфия и широкоформатная печать любого размера
+          b.promo__text Размер не&nbsp;имеет значения!
+          .promo__footer
+            a(href="#").btn.promo__btn.js-modal-form Заказать печать
+            p.promo__sub с доставкой по Ярославлю и Ярославской области
+        a(href="#about" aria-label="перейти к разделу о компании").scroll-btn.intro__btn.js-scrolling
+          +icon("mouse", "scroll-btn__icon")
+      main.main-content
+      block content
+      include ../layout/footer
+      .overlay
+      .modal.modal--form
+        button(type="button" aria-label="закрыть модальное окно").modal__close.btn-close
+          +icon('close', 'btn-close__icon')
+        form(method="POST" enctype="multipart/form-data").form.form--modal
+          p.form__text.form__text--light Есть вопросы?
+          h2.form__title.form__title--light Закажите звонок
+          p.form__row
+            input(type="text" placeholder="Ваше имя" name="name" required).input.input--light#modal-name
+            label(for="modal-name").visually-hidden Введите ваше имя
+          p.form__row
+            input(type="tel" placeholder="Телефон" name="tel" required).input.input--light#modal-phone
+            label(for="modal-phone").visually-hidden Введите ваше телефон
+          button(type="submit").btn.form__btn Отправить
+    script(src="js/bundle.js")

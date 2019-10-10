@@ -1,0 +1,52 @@
+.site-section {
+  padding: 110px 0;
+  position: relative;
+
+  &--grey {
+    background-color: $section-color;
+  }
+
+  &--stripped {
+    background-image: repeating-linear-gradient(90deg, rgba(232, 232, 232, 0.3) 0%, rgba(232, 232, 232, 0.3) 0.1%, transparent 0.1%, transparent 20%);
+    background-repeat: repeat-x;
+
+    @include phones {
+      background-image: none;
+    }
+  }
+
+  &--divider {
+    &::before,
+    &::after {
+      content: "";
+      width: 2px;
+      height: 80px;
+      background-color: $title-color;
+      transform: translateX(-50%);
+      position: absolute;
+      z-index: 1;
+
+      @include phones {
+        display: none;
+      }
+    }
+
+    &::before {
+      left: 49.5%;
+      bottom: -20px;
+    }
+
+    &::after {
+      left: 50.5%;
+      bottom: -60px;
+    }
+  }
+
+  @include tablets {
+    padding: 70px 0 80px;
+  }
+
+  @include phones {
+    padding: 35px 0 50px;
+  }
+}
